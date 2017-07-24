@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica";
+  font-size: 22px,
+  color:seashell;
+  background-color: black;
+  opacity: 0.9;
+}
+
+/*All the headings seems to have the same styling on the page, so styling them universally here */
+h2, h4, h3, p, h5 {
+  color: seashell;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3{
+  font-size: 30px;
+}
+h4 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+/* Header */
+header {
+  height: 69px;
+  border-bottom: 1px solid seashell;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  top: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header img {
+  height: 50px;
+}
+
+.logo {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+header ul li {
+padding-left: 10px;
+padding-right: 10px;
+}
+
+header a {
+  color: seashell;
+  font-size: 22px;
+}
+
+/* Added a main div to push all the content subsequent to the fixed header down the appropriate amount so it wouldn't overlap */
+.main {
+  position: relative;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Jumbotron, aka the big picture display */
+.jumbotron {
+
+  background: url("../images/img-mission-background.jpg");
+  min-height: 700px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+}
+.headline {
+  text-align: center;
+  background-color: black;
+  opacity: 1;
+  width: 1200px;
+}
+
+/*Catalog section of all the available teas */
+.catalog {
+  margin-top: 30px;
+  width: 1000px;
+/*Use this border to debug positioning issues so you can see the borders of the div */
+/*  border: 1px solid white; */
+
+  /*To center the child divs that contain the content inside this larger catalog div */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading of the catalog section; nav menu item "Featured Teas" points to this div */
+#tea-catalog {
+  text-align: center;
+}
+
+.tea-list {
+  margin-top: 20px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tea-list img {
+  height: 200px;
+  width: 300px;
+}
+
+.tea-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+/*Locations section */
+.locations {
+/*Use this border to debug positioning issues so you can see the borders of the div */
+/*  border: solid 1px white; */
+  min-height: 500px;
+  width: 1200px;
+  margin-top: 20px;
+  background: url("../images/img-locations-background.jpg");
+
+/*Positioning the midsized divs (i.e. #locations-heading and .locations-list) */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.locations-list {
+  /*Use this border to debug positioning issues so you can see the borders of the div */
+/*  border: solid 1px white; */
+  display: flex;
+  flex-direction: row;
+  width: 980px;
+  min-height: 300px;
+  justify-content: space-between;
+  /* Spec is 15x between locations heading and .locations-list. Locations heading already has 10px margin bottom. */
+  margin-top: 5px;
+}
+.location-item {
+  background-color: black;
+  opacity: 1;
+  width: 300px;
+/* To position the text within the black boxes */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer, .copyright, .contact-info {
+  /*Use this border to debug positioning issues so you can see the borders of the div */
+  /* border: solid 1px white; */
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.contact-info {
+  min-height: 200px;
+  margin: 0 auto;
+/* Make a flex box in order to position text within the div */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  margin-left: 20px;
+}
